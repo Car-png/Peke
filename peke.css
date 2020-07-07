@@ -3,7 +3,7 @@
       padding: 0;
 }
 
-body{
+body#particles-js{
       /* background: #151515; */
       background: url(img/halo_by_dzidziamk_de0sx5l.jpg) no-repeat;
       background-size: cover;
@@ -15,14 +15,24 @@ body{
 }
 
 .box{
-      width: 450px;
+      width: 500px;
       height: 500px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-around;
       padding: 10px;
       position: relative;
       background: rgba(70, 70, 70, 0.15);
+      border-top-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      transform: rotate(30deg);
+      transition: all 1s ease;
+}
+
+.box:hover{
+      transform: rotate(720deg);
+      transition: all 1s ease;
 }
 
  .box::before{
@@ -37,22 +47,21 @@ body{
       filter: blur(28px);
 }
 
-/* .box::after{
+.box::after{
       content: '';
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
-      width: 100%;
+      width: 50%;
       height: 100%;
-      background: url(img/halo_by_dzidziamk_de0sx5l.jpg) no-repeat;
-      background-size: cover;
-      filter: blur(8px);
+      background: rgba(70, 70, 70, 0.233);
       z-index: -2;
-} */
+      border-top-left-radius: 14px;
+}
 
 .stars{
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
       display: flex;
       justify-content: center;
       background: url(img/Stelar.gif) no-repeat;
@@ -70,6 +79,7 @@ body{
       margin-right: 5px;
       text-align: center;
       cursor: pointer;
+      padding: 10px;
 }
 .phraseI:hover{
       box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
@@ -82,8 +92,7 @@ body{
 .phraseII{
       width: 240px;
       text-align: center;
-      cursor: pointer;
-      
+      cursor: pointer;      
 }
 .phraseII:hover{
       box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
@@ -101,10 +110,6 @@ label{
 }
 label:hover{
       color: #58689D;
-}
-
-label::selection{
-      background: transparent;
 }
 
 .sound{
