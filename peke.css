@@ -4,7 +4,7 @@
 }
 
 body{
-      /* background: linear-gradient(to right,purple, blue,#151515); */
+      background: #151515;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,15 +15,37 @@ body{
 .box{
       width: 450px;
       height: 500px;
-      border: 6px solid black;
       display: flex;
       flex-direction: column;
-      /* justify-content: space-between; */
       align-items: center;
       padding: 10px;
-      overflow: hidden;
       position: relative;
+      background: rgba(70, 70, 70, 0.15);
 }
+
+/* .box::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 50%;
+      background: linear-gradient(to right,rgba(0, 0, 144, 0.432), rgba(131, 7, 7, 0.431));
+      z-index: -1;
+      filter: blur(28px);
+}
+
+.box::after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 50%;
+      background: linear-gradient(to right, rgba(0, 0, 144, 0.432), rgba(131, 7, 7, 0.431));
+      filter: blur(18px);
+      z-index: -1;
+} */
 
 .stars{
       width: 300px;
@@ -42,18 +64,44 @@ body{
 
 .phraseI{
       width: 200px;
-      margin-right: 10px;
+      margin-right: 5px;
       text-align: center;
+      cursor: pointer;
 }
+.phraseI:hover{
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  10px 10px 10px rgba(0, 0, 0, 0.3),
+                  inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+      transition: all 1s ease;
+}
+
 .phraseII{
       width: 240px;
       text-align: center;
+      cursor: pointer;
+      
+}
+.phraseII:hover{
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  10px 10px 10px rgba(0, 0, 0, 0.3),
+                  inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+                  inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+      transition: all 1s ease;
 }
 
 label{
       margin-top: 5px;
-      color: #58689D;
+      color: white;
+      cursor: pointer;
       font-size: 10px;
+}
+label:hover{
+      color: #58689D;
+}
+
+label::selection{
+      background: transparent;
 }
 
 .sound{
