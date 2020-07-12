@@ -19,11 +19,12 @@ body{
       bottom: 0;
       left: 0;
       right: 0;
+      min-height: 100vh;
 }
 
 .box{
-      width: 500px;
-      height: 500px;
+      width: 450px;
+      height: 400px;
       display: flex;
       position: relative;
       flex-direction: column;
@@ -32,23 +33,29 @@ body{
       padding: 10px;
       position: relative;
       background: rgba(70, 70, 70, 0.15);
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-      transition: all 1s ease;
-      box-sizing: border-box;      
+      /* -webkit-transform: rotate(45deg); */
+      /* -moz-transform: rotate(45deg); */
+      /* -ms-transform: rotate(45deg); */
+      /* -o-transform: rotate(45deg); */
+      /* transform: rotate(45deg); */
+
+      /* transition: all 1s ease; */
+      box-sizing: border-box;
       
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
 }
 
 .box:hover{
-      transform: rotate(720deg);
-      transition: all 1s ease;
+      /* transform: rotate(720deg); */
+
+      /* transition: all 5s ease; */
       background: transparent;
       box-shadow: 0 0 5px white,
                   0 0 25px white,
-                  0 0 50px white;
+                  0 0 50px white,
+                  0 0 100px white,
+                  0 0 150px white;
 }
 
  .box::before{
@@ -76,18 +83,27 @@ body{
 } */
 
 .stars{
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
       display: flex;
       justify-content: center;
       background: url(img/Stelar.gif) no-repeat;
       background-size: cover;
       border-radius: 50%;
+
+      transform-style: preserve-3d;
+      transform: translateZ(100px);
 }
 
 .phrases{
       display: flex;
-      padding: 5px;
+      flex-direction: row;
+      padding: 2px;
+      width: 100%;
+
+
+      transform-style: preserve-3d;
+      transform: translateZ(60px);
 }
 
 .phraseI{
@@ -106,9 +122,10 @@ body{
 }
 
 .phraseII{
-      width: 240px;
+      width: 300px;
       text-align: center;
       cursor: pointer;      
+      padding: 5px;
 }
 .phraseII:hover{
       box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
@@ -133,6 +150,10 @@ label:hover{
       height: 100px;
       background: url(img/s.png) no-repeat;
       background-size: cover;
+
+
+      transform-style: preserve-3d;
+      transform: translateZ(100px);
 }
 
 .QR{
